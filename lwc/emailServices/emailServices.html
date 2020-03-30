@@ -1,0 +1,15 @@
+<!--
+ - Created by Master on 15.11.2019.
+ -->
+
+<!-- Email Services -->
+<template>
+    <lightning-card title='send email'>
+    <div >
+        <lightning-textarea  disabled value={emailTo} label="You will send your message to this email" ></lightning-textarea>
+        <lightning-textarea data-my-id="subjectOfMessage" onchange={changeSubject}  placeholder="Email subject"></lightning-textarea>
+        <lightning-textarea  data-my-id="textOfMessage" onchange={changeText} placeholder="Text of message"></lightning-textarea>
+    </div>
+    <lightning-button onclick={sendMessage} variant="brand" label="Send"  icon-name="utility:email" ></lightning-button>
+    </lightning-card>
+</template>
